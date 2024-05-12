@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  padding:0;
+}
+
+.Csss {
+  width: auto;
+  /* 設置SVG的寬度為80% */
+  height: auto;
+  /* 讓SVG的高度自動調整以保持其原始比例 */
+
+  transform: scale(0.75);
+  /* 縮小80% */
+}
