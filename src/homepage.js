@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Tooltip } from "flowbite-react";
 
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -243,12 +242,7 @@ export default function Home() {
                         </circle>
 
                     </g>
-                    {pop && (
-                <Tooltip className='tooltip'>
-                    <h1>{pop}</h1>
-                 
-                </Tooltip>
-            )}
+
                 </svg>}
 
             </svg>
