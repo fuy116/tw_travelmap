@@ -13,7 +13,11 @@ import Maps from './maps.js';
 import Home from './homepage.js'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Testa from './com_test.js';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+const theme = createTheme({
+  // 可以添加自定義主題設置
+});
 function App() {
   return (
     <BrowserRouter>

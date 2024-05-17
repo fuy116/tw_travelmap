@@ -1,21 +1,35 @@
-/* styles.css */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
-    height: 500px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 4rem;
-  }
+  position: relative;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+  padding: 0px;
+
   
-  @media (max-width: 600px) {
-    .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 4rem;
+ 
+}
+body {
+  margin: 0;
+  padding: 0; /* 移除內距 */
+  overflow-x: hidden; /* 避免水平滾動 */
+  height: 100%; /* 設定高度為視窗高度 */
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  .hero {
       height: 300px;
       font-size: 3em;
-    }
   }
-  
+}
+
+.appBar {
+  color: "#fff",
+}
