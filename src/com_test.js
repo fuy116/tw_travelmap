@@ -65,9 +65,8 @@ export default function Testa() {
             <Box className="hero">
                 <Box>React Blog</Box>
             </Box>
-
+      
             <SpeedDial model={items} radius={120} type="quarter-circle" direction="up-left" style={{ right: 0, bottom: 0 }} />
         </div>
     )
 }
-        
