@@ -1,6 +1,8 @@
 
 import React from 'react';
 import './blog.css'
+import './components/article.js'
+import Article from './components/article.js';
 const buttonClass = 'bg-white text-zinc-800 py-2 px-4 rounded';
 
 const Blog = () => {
@@ -13,11 +15,12 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-
             <div className="max-w-7xl mx-auto p-8 ">
-                <div className="bg-white p-6 rounded-lg shadow-lg mb-6 h-[32rem]">
-                    <h3 className="text-xl font-semibold mb-2">資料結構與作業 Sorting</h3>
-                    <p className="text-zinc-700 mb-4">記錄我今天進度的實作和遇到的問題。主要進行 Insertion Sort練習；將遍歷過的元素一一排序。</p>
+                <div className="bg-white p-3 rounded-lg shadow-lg mb-6 h-[32rem]">
+                    <Article title ="hello" text ="測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1測試文字1"/> 
+                    <Article title ="hello2"/> 
+                    <Article title ="hello3"/> 
+                    <Article title ="hello4"/> 
                 </div>
             </div>
         </div>
