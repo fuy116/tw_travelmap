@@ -2,8 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import {Button} from 'primereact/button';
-import './test.css';
-import './homepage.css';
+import './css/maps.css';
 
 import Article from './components/article.js';
 
