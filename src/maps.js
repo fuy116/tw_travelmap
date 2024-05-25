@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom'
 
 import { Button } from 'primereact/button';
 import { InputTextarea } from "primereact/inputtextarea";
@@ -63,45 +63,49 @@ export default function Maps() {
   const currentArticles = articles.slice(first, first + rows);
 
   return (
-    <div className="bg-zinc-100">
-      
-      <div className="bg-cover bg-center h-64" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')" }}>
-        <div className="flex justify-between items-center h-full px-8">
-          <div className="text-white">
-            <h1 className="text-4xl font-bold">{params.city_id}</h1>
-          </div>
-        </div>
-      </div>
-      
-      <div className="max-w-7xl mx-auto p-8 ">
-        <div className="bg-white p-3 rounded-lg shadow-lg mb-6  ">
+    <div className="min-h-screen flex flex-col">
+
+<header className="bg-cover bg-top h-[4rem]  bg-sky-600" >
+  <div className="flex justify-between items-center px-8 h-full">
+    <div className="text-white">
+      <h1 className="text-4xl font-bold">{params.city_id}</h1>
+    </div>
+  </div>
+</header>
+
+ 
+      <div className="flex-grow bg-zinc-100 mx-auto p-8  w-full">
+        <div className="bg-white p-3 rounded-lg shadow-lg mb-6 min-h-[30rem]  ">
           {currentArticles.length > 0 ? (
             currentArticles.map((article, index) => (
               <Article key={index} title={article.title} text={article.text} />
             ))
           ) : (
           <div className="text-center w-full">
-            <p className="text-gray-500 text-lg">目前沒有文章</p>
+            <p className="text-gray-500  text-2xl">目前沒有文章</p>
           </div>
           )}
         </div>
-
-        <div className="card flex justify-content-center">
-          <Button label="新增文章" icon="pi pi-external-link" onClick={() => setVisible(true)} />
-          <Dialog header="新增文章" visible={visible} style={{ width: '50vw' }} onHide={() => setVisible(false)}>
-            <div className="card flex justify-content-center">
-              <InputText value={inputTitle} placeholder="標題" onChange={(e) => setTitle(e.target.value)} />
-            </div>
-            <div className="card flex justify-content-center">
-              <InputTextarea value={inputContent} placeholder="文章內容" onChange={(e) => setContent(e.target.value)} rows={5} cols={30} />
-            </div>
-            <div className="card flex justify-content-center">
-              <Button label="Submit" onClick={addArticle} />
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <Button icon="pi pi-angle-double-left">Back</Button>
+        </Link>
+      
+        <div className="card flex justify-content-center ">
+          <Button label="新增文章" icon="pi pi-plus" onClick={() => setVisible(true)} />
+            <Dialog header="新增文章"  visible={visible} onHide={() => setVisible(false)}>
+              <div className="card flex justify-content-center">
+                <InputText value={inputTitle} placeholder="文章標題" className="m-3"  onChange={(e) => setTitle(e.target.value)} />
+              </div>
+              <div className="card flex justify-content-center">
+                <InputTextarea value={inputContent} placeholder="文章內容" onChange={(e) => setContent(e.target.value)} rows={10} cols={60} />
+              </div>
+              <div className="card flex justify-content-center">
+              <Button label="提交" className="m-3" onClick={addArticle} />
             </div>
           </Dialog>
         </div>
 
-        <div className="card flex justify-content-center">
+        <div className="card flex justify-content-center py-5">
           <Paginator first={first} rows={rows} totalRecords={articles.length} onPageChange={onPageChange} />
         </div>
       </div>
