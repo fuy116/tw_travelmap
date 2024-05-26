@@ -20,14 +20,7 @@ export default function Home() {
         }
 
     };
-    function handleClick(event) {
-        var target = event.target;
-        var infoDiv = document.getElementById('info');
-        if (target.tagName === 'circle') {
-            var placeName = target.getAttribute('data-name');
-            infoDiv.textContent = '你點擊了: ' + placeName;
-        }
-    }
+
 
     return (
         
