@@ -2,7 +2,7 @@ import { db } from './firebase';
 import { collection, query, getDocs } from 'firebase/firestore';
 
 class ranking {
-    static async getTopCitiesByArticleCount() {
+    static async getTopCities() {
         const q = query(collection(db, 'articles'));
         const querySnapshot = await getDocs(q);
         const cityCounts = {};

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/homepage.css'
 import BasicDemo from './components/rank';
@@ -20,6 +20,14 @@ export default function Home() {
         }
 
     };
+    function handleClick(event) {
+        var target = event.target;
+        var infoDiv = document.getElementById('info');
+        if (target.tagName === 'circle') {
+            var placeName = target.getAttribute('data-name');
+            infoDiv.textContent = '你點擊了: ' + placeName;
+        }
+    }
 
     return (
         

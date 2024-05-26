@@ -6,7 +6,7 @@ export default function BasicDemo() {
     const [topCities, setTopCities] = useState([]);
 
     useEffect(() => {
-        ranking.getTopCitiesByArticleCount().then(data => setTopCities(data));
+        ranking.getTopCities().then(data => setTopCities(data));
     }, []);
 
     return (
