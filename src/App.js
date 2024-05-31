@@ -8,6 +8,7 @@ import React from 'react';
 import './css/App.css';
 import Maps from './maps.js';
 import Home from './homepage.js'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
@@ -18,7 +19,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/maps" element={<Maps />} >     
           <Route path=":city_id" element={"找不到頁面"} />
         </Route>

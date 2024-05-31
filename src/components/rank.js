@@ -11,7 +11,7 @@ export default function BasicDemo() {
 
     return (
         <div className="card">
-            <DataTable value={topCities} tableStyle={{ minWidth: '50rem' }}>
+            <DataTable value={topCities} >
                 <Column field="city_id" header="縣市"></Column>
                 <Column field="articleCount" header="文章數"></Column>
             </DataTable>
