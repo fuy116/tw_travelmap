@@ -8,4 +8,11 @@
 
 ### 開發完成功能
 1.新增文章、串接Firestore
-2.
+
+
+
+### 執行步驟
+
+1.	git clone
+2.	npm install
+3.	npm start
