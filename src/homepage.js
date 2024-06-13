@@ -26,7 +26,7 @@ export default function Home() {
         
         <div>
             <div class="grid grid-cols-2 grid-rows-1 grid-flow-row ">
-                <svg  width="1000" height="1000" stroke="#ffffff"  fill="#6f9c76" xmlns="http://www.w3.org/2000/svg" version="1.1" onClick={handleClick}>
+                <svg  width="1000" height="1000" stroke="#ffffff"  fill="#8E8E8E" xmlns="http://www.w3.org/2000/svg" version="1.1" onClick={handleClick}>
                 <defs>
                 </defs>
                 <g>
